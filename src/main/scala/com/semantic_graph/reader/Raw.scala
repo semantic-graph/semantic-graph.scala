@@ -3,7 +3,6 @@ package com.semantic_graph.reader
 import java.nio.file.Paths
 
 import com.semantic_graph.SemanticGraph
-import guru.nidi.graphviz.parse.Parser
 
 import scala.io.Source
 
@@ -28,10 +27,8 @@ object Raw {
           case suffix => throw new RuntimeException("Unknown suffix: " + suffix)
         }
       }
-      case "dot" => {
-        val p = new Parser()
-        val g = p.read(str)
-        Dot2Graph.parse(g)
+      case "gexf" => {
+        Gexf2Graph.parse(str)
       }
       case ext => throw new RuntimeException("Unknown extension: " + ext)
     }

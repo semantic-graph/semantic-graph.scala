@@ -1,8 +1,8 @@
 package com.semantic_graph.writer
 
-/* Created at 2/19/20 by zhen */
-case class NodeId(id: String)
+import com.semantic_graph.NodeId
 
+/* Created at 2/19/20 by zhen */
 trait GraphWriter[NodeAttr <: Serializable, EdgeAttr <: Serializable]
   extends Serializable {
   def createNode(label: String, attrs: Map[NodeAttr, String]): NodeId

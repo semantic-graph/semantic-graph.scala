@@ -1,5 +1,6 @@
 package com.semantic_graph
 
+case class NodeId(id: String)
 
 object EdgeType extends Enumeration {
   val DataFlow, ControlFlow, Call = Value
@@ -18,11 +19,10 @@ case class EdgeData(`type` : EdgeType.Value) {
 
 // TODO: Use Scala-graph to rewrite this
 class SemanticGraph {
-  protected var nodeNames: List[String] = List()
-  protected var nodes : Map[Int, NodeData] = Map()
-  protected var nodeHashMap : Map[Int, Int] = Map()
-  protected var edges : Map[(Int, Int), EdgeData] = Map()
-  protected var edgeHashMap : Map[Int, (Int, Int)] = Map()
+  protected var nodes : Map[NodeId, NodeData] = Map()
+  protected var nodeHashMap : Map[Int, NodeId] = Map()
+  protected var edges : Map[(NodeId, NodeId), EdgeData] = Map()
+  protected var edgeHashMap : Map[Int, (NodeId, NodeId)] = Map()
 
   def copy() : SemanticGraph = {
     val g = new SemanticGraph()
@@ -46,10 +46,6 @@ class SemanticGraph {
       }
     }
     self
-  }
-
-  def hasNodeName(nodeName: String) : Boolean = {
-    nodeNames.contains(nodeName)
   }
 
   def diff(other: SemanticGraph) : SemanticGraph = {
@@ -78,12 +74,12 @@ class SemanticGraph {
     edgeHashMap -= k
   }
 
-  def delNode(n: Int) : Unit = {
+  def delNode(n: NodeId) : Unit = {
     nodeHashMap -= nodes(n).valHash()
     nodes -= n
   }
 
-  def neighbors(node: Int) : Set[Int] = {
+  def neighbors(node: NodeId) : Set[NodeId] = {
     (edges.keys map { case (u, v) =>
       if (u == node) { Some(v) }
       else if (v == node) { Some(u) }
@@ -92,25 +88,21 @@ class SemanticGraph {
   }
 
   def addEdge(u: Int, v: Int, edgeData: EdgeData) : Unit = {
+    addEdge(NodeId(u.toString), NodeId(v.toString), edgeData)
+  }
+
+  def addEdge(u: NodeId, v: NodeId, edgeData: EdgeData) : Unit = {
     assert(edges.get((u, v)).isEmpty, edges.get((u, v)))
     edges += ((u, v) -> edgeData)
     edgeHashMap += ((nodes(u).valHash(), nodes(v).valHash(), edges((u, v)).valHash()).hashCode() -> (u, v))
   }
 
-  def addEdge(u: String, v: String, edgeData: EdgeData) : Unit = {
-    val uIdx = nodeNames.indexOf(u)
-    val vIdx = nodeNames.indexOf(v)
-    assert(vIdx != -1)
-    assert(uIdx != -1)
-    addEdge(uIdx, vIdx, edgeData)
-  }
-
-  def hasEdge(u: Int, v: Int) : Boolean = {
+  def hasEdge(u: NodeId, v: NodeId) : Boolean = {
     edges.get((u, v)).isDefined
   }
 
-  def iterNodes : Iterator[(Int, NodeData)] = nodes.iterator
-  def iterEdges : Iterator[((Int, Int), EdgeData)] = edges.iterator
+  def iterNodes : Iterator[(NodeId, NodeData)] = nodes.iterator
+  def iterEdges : Iterator[((NodeId, NodeId), EdgeData)] = edges.iterator
 
   def toJSON: String = {
     JsonUtil.toJson(Map[String, Object](
@@ -119,32 +111,26 @@ class SemanticGraph {
     ))
   }
 
-  def addNode(nodeData: NodeData, nodeId: Int) : Int = {
+  def addNode(nodeData: NodeData, nodeId: Int) : NodeId = {
+    addNode(nodeData, NodeId(nodeId.toString))
+  }
+
+  def addNode(nodeData: NodeData, nodeId: NodeId) : NodeId = {
     assert (!nodes.contains(nodeId))
     nodes += (nodeId -> nodeData)
     nodeHashMap += (nodeData.valHash() -> nodeId)
     nodeId
   }
 
-  def addNode(nodeData: NodeData, nodeName: String) : Int = {
-    val i = nodeNames.indexOf(nodeName)
-    val nodeId = if (i == -1) {
-      nodeNames :+= nodeName
-      nodeNames.length - 1
-    } else {
-      i
-    }
-    addNode(nodeData, nodeId)
-    nodeId
-  }
+  def hasNode(nodeId: Int) : Boolean = hasNode(NodeId(nodeId.toString))
 
-  def hasNode(nodeId: Int) : Boolean = {
+  def hasNode(nodeId: NodeId) : Boolean = {
     nodes.contains(nodeId)
   }
 }
 
 class SelfNamedGraph extends SemanticGraph {
-  def addNode(nodeData: NodeData) : Int = {
-    addNode(nodeData, nodes.size.toString)
+  def addNode(nodeData: NodeData) : NodeId = {
+    addNode(nodeData, NodeId(nodes.size.toString))
   }
 }

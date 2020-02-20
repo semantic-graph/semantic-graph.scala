@@ -15,6 +15,7 @@ libraryDependencies += "guru.nidi" % "graphviz-java" % "0.12.1"
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.6.2"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0"
 libraryDependencies += "it.uniroma1.dis.wsngroup.gexf4j" % "gexf4j" % "1.0.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
 
 publishM2Configuration := publishM2Configuration.value.withOverwrite(true)
 

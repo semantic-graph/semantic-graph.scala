@@ -2,6 +2,7 @@ package com.semantic_graph.writer
 
 import java.io.{File, FileWriter}
 
+import com.semantic_graph.NodeId
 import it.uniroma1.dis.wsngroup.gexf4j.core.{EdgeType, Mode}
 import it.uniroma1.dis.wsngroup.gexf4j.core.data.{Attribute, AttributeClass, AttributeType}
 import it.uniroma1.dis.wsngroup.gexf4j.core.impl.{GexfImpl, StaxGraphWriter}
