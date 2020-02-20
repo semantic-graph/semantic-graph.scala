@@ -1,9 +1,21 @@
 package com.semantic_graph
 
-case class NodeId(id: String)
+import com.fasterxml.jackson.annotation.JsonValue
+
+case class NodeId(id: String) {
+  @JsonValue
+  def getId: String = id
+}
 
 object EdgeType extends Enumeration {
-  val DataFlow, ControlFlow, Call = Value
+  val DataFlow, ControlFlow, Call, Unknown = Value
+
+  def fromGexf(v: String): EdgeType.Value = {
+    v match {
+      case "DATAFLOW" => DataFlow
+      case "CALL" => Call
+    }
+  }
 }
 
 object NodeType extends Enumeration {

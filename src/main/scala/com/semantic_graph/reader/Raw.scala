@@ -28,7 +28,7 @@ object Raw {
         }
       }
       case "gexf" => {
-        Gexf2Graph.parse(str)
+        Gexf2Graph.parse(path)
       }
       case ext => throw new RuntimeException("Unknown extension: " + ext)
     }
