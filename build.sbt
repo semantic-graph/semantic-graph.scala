@@ -7,6 +7,9 @@ version := "0.1"
 
 scalaVersion := "2.13.1"
 
+resolvers += Resolver.mavenLocal
+
+libraryDependencies += "io.github.izgzhen" %% "msbase" % "0.1"
 libraryDependencies += "junit" % "junit" % "4.8.1" % "test"
 libraryDependencies += "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.10.0"
 libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"

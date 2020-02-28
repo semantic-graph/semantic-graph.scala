@@ -1,6 +1,7 @@
 package com.semantic_graph
 
 import com.fasterxml.jackson.annotation.JsonValue
+import io.github.izgzhen.msbase.JsonUtil
 
 case class NodeId(id: String) {
   @JsonValue

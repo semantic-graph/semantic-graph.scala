@@ -1,6 +1,7 @@
 package com.semantic_graph.reader
 
-import com.semantic_graph.{EdgeData, EdgeType, JsonUtil, NodeData, NodeType, SemanticGraph}
+import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, SemanticGraph}
+import io.github.izgzhen.msbase.JsonUtil
 
 case class RbEdge(u: Int, v: Int, `type`: String)
 case class RbGraph(nodes: List[String], edges: List[RbEdge])

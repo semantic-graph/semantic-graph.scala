@@ -1,6 +1,7 @@
 package com.semantic_graph.reader
 
-import com.semantic_graph.{EdgeData, EdgeType, JsonUtil, NodeData, NodeType, SemanticGraph}
+import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, SemanticGraph}
+import io.github.izgzhen.msbase.JsonUtil
 
 class ShGraph(val Nodes: List[List[String]], val Edges: List[List[Int]])
 

@@ -1,6 +1,7 @@
 package com.semantic_graph.reader
 
-import com.semantic_graph.{EdgeData, EdgeType, JsonUtil, NodeData, NodeId, NodeType, SemanticGraph}
+import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeId, NodeType, SemanticGraph}
+import io.github.izgzhen.msbase.JsonUtil
 
 class JsGraph(val nodes: List[String], val edges: List[List[Int]])
 
