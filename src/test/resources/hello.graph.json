@@ -1,28 +1,208 @@
 {
+  "edges" : [ [ [ "1552", "1606" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1312", "1360" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1616", "1616" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1264", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1248", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1360", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1335", "1360" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1208", "1224" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1208", "1226" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1416", "1428" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1224", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1530", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1335", "1347" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1606", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1428", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1479", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1347", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1616", "1638" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1664", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1226", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "69", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1224", "1226" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1512", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1606", "1616" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1456", "1512" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1376", "1440" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1465", "1491" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1440", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1520", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1479", "1491" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1376", "1416" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1416", "1440" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1668", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1456", "1465" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1312", "1335" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1638", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1520", "1376" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1491", "0" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1552", "1638" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ], [ [ "1465", "1479" ], {
+    "type" : {
+      "enumClass" : "com.semantic_graph.EdgeType",
+      "value" : "ControlFlow"
+    }
+  } ] ],
   "nodes" : {
-    "1264" : {
-      "operations" : [ "xor ebp, ebp", "mov r9, rdx", "pop rsi", "mov rdx, rsp", "and rsp, 0xfffffffffffffff0", "push rax", "push rsp", "lea r8, [rip + 0x17a]", "lea rcx, [rip + 0x103]", "lea rdi, [rip + 0xe6]", "call qword [rip + 0x200ac6]" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1360" : {
-      "operations" : [ "pop rbp", "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1616" : {
-      "operations" : [ "mov rdx, r15", "mov rsi, r14", "mov edi, r13d", "call qword [r12 + rbx*8]", "add rbx, 1", "cmp rbp, rbx", "jne 0x650" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1376" : {
-      "operations" : [ "lea rdi, [rip + 0x200aa9]", "lea rsi, [rip + 0x200aa2]", "push rbp", "sub rsi, rdi", "mov rbp, rsp", "sar rsi, 3", "mov rax, rsi", "shr rax, 0x3f", "add rsi, rax", "sar rsi, 1", "je 0x5a0" ],
+    "0" : {
+      "operations" : [ ],
       "type" : {
         "enumClass" : "com.semantic_graph.NodeType",
         "value" : "UNKNOWN"
@@ -35,29 +215,43 @@
         "value" : "UNKNOWN"
       }
     },
+    "1224" : {
+      "operations" : [ "call rax" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1226" : {
+      "operations" : [ "add rsp, 8", "ret" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1248" : {
+      "operations" : [ "jmp qword [rip + 0x200b12]" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1264" : {
+      "operations" : [ "xor ebp, ebp", "mov r9, rdx", "pop rsi", "mov rdx, rsp", "and rsp, 0xfffffffffffffff0", "push rax", "push rsp", "lea r8, [rip + 0x17a]", "lea rcx, [rip + 0x103]", "lea rdi, [rip + 0xe6]", "call qword [rip + 0x200ac6]" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1312" : {
+      "operations" : [ "lea rdi, [rip + 0x200ae9]", "push rbp", "lea rax, [rip + 0x200ae1]", "cmp rax, rdi", "mov rbp, rsp", "je 0x550" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
     "1335" : {
       "operations" : [ "mov rax, qword [rip + 0x200a9a]", "test rax, rax", "je 0x550" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "69" : {
-      "operations" : [ "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "clc", "add dword [rax], eax", "add byte [rax], al", "add byte [rax], al", "add al, bh", "add dword [rax], eax", "add byte [rax], al", "add byte [rax], al", "add byte [rax], cl", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rbx], al", "add byte [rax], al", "add byte [rax + rax], al", "add byte [rax], al", "cmp byte [rdx], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "cmp byte [rdx], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "cmp byte [rdx], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "sbb al, 0", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "sbb al, 0", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add dword [rax], eax", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add dword [rax], eax", "add byte [rax], al", "add eax, 0", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add al, bl" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "0" : {
-      "operations" : [ ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1479" : {
-      "operations" : [ "mov rdi, qword [rip + 0x200a3a]", "call 0x4e0" ],
       "type" : {
         "enumClass" : "com.semantic_graph.NodeType",
         "value" : "UNKNOWN"
@@ -70,8 +264,113 @@
         "value" : "UNKNOWN"
       }
     },
+    "1360" : {
+      "operations" : [ "pop rbp", "ret" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1376" : {
+      "operations" : [ "lea rdi, [rip + 0x200aa9]", "lea rsi, [rip + 0x200aa2]", "push rbp", "sub rsi, rdi", "mov rbp, rsp", "sar rsi, 3", "mov rax, rsi", "shr rax, 0x3f", "add rsi, rax", "sar rsi, 1", "je 0x5a0" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1416" : {
+      "operations" : [ "mov rax, qword [rip + 0x200a61]", "test rax, rax", "je 0x5a0" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1428" : {
+      "operations" : [ "pop rbp", "jmp rax" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1440" : {
+      "operations" : [ "pop rbp", "ret" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1456" : {
+      "operations" : [ "cmp byte [rip + 0x200a59], 0", "jne 0x5e8" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
     "1465" : {
       "operations" : [ "cmp qword [rip + 0x200a37], 0", "push rbp", "mov rbp, rsp", "je 0x5d3" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1479" : {
+      "operations" : [ "mov rdi, qword [rip + 0x200a3a]", "call 0x4e0" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1491" : {
+      "operations" : [ "call 0x520", "mov byte [rip + 0x200a31], 1", "pop rbp", "ret" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1512" : {
+      "operations" : [ "ret" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1520" : {
+      "operations" : [ "push rbp", "mov rbp, rsp", "pop rbp", "jmp 0x560" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1530" : {
+      "operations" : [ "push rbp", "mov rbp, rsp", "mov eax, 0", "pop rbp", "ret" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1552" : {
+      "operations" : [ "push r15", "push r14", "mov r15, rdx", "push r13", "push r12", "lea r12, [rip + 0x2007ce]", "push rbp", "lea rbp, [rip + 0x2007ce]", "push rbx", "mov r13d, edi", "mov r14, rsi", "sub rbp, r12", "sub rsp, 8", "sar rbp, 3", "call 0x4b8", "test rbp, rbp", "je 0x666" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1606" : {
+      "operations" : [ "xor ebx, ebx", "nop dword [rax + rax]" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1616" : {
+      "operations" : [ "mov rdx, r15", "mov rsi, r14", "mov edi, r13d", "call qword [r12 + rbx*8]", "add rbx, 1", "cmp rbp, rbx", "jne 0x650" ],
+      "type" : {
+        "enumClass" : "com.semantic_graph.NodeType",
+        "value" : "UNKNOWN"
+      }
+    },
+    "1638" : {
+      "operations" : [ "add rsp, 8", "pop rbx", "pop rbp", "pop r12", "pop r13", "pop r14", "pop r15", "ret" ],
       "type" : {
         "enumClass" : "com.semantic_graph.NodeType",
         "value" : "UNKNOWN"
@@ -91,311 +390,12 @@
         "value" : "UNKNOWN"
       }
     },
-    "1552" : {
-      "operations" : [ "push r15", "push r14", "mov r15, rdx", "push r13", "push r12", "lea r12, [rip + 0x2007ce]", "push rbp", "lea rbp, [rip + 0x2007ce]", "push rbx", "mov r13d, edi", "mov r14, rsi", "sub rbp, r12", "sub rsp, 8", "sar rbp, 3", "call 0x4b8", "test rbp, rbp", "je 0x666" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1530" : {
-      "operations" : [ "push rbp", "mov rbp, rsp", "mov eax, 0", "pop rbp", "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1456" : {
-      "operations" : [ "cmp byte [rip + 0x200a59], 0", "jne 0x5e8" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1520" : {
-      "operations" : [ "push rbp", "mov rbp, rsp", "pop rbp", "jmp 0x560" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1226" : {
-      "operations" : [ "add rsp, 8", "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1428" : {
-      "operations" : [ "pop rbp", "jmp rax" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1312" : {
-      "operations" : [ "lea rdi, [rip + 0x200ae9]", "push rbp", "lea rax, [rip + 0x200ae1]", "cmp rax, rdi", "mov rbp, rsp", "je 0x550" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1638" : {
-      "operations" : [ "add rsp, 8", "pop rbx", "pop rbp", "pop r12", "pop r13", "pop r14", "pop r15", "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1224" : {
-      "operations" : [ "call rax" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1491" : {
-      "operations" : [ "call 0x520", "mov byte [rip + 0x200a31], 1", "pop rbp", "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1440" : {
-      "operations" : [ "pop rbp", "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1512" : {
-      "operations" : [ "ret" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1248" : {
-      "operations" : [ "jmp qword [rip + 0x200b12]" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1606" : {
-      "operations" : [ "xor ebx, ebx", "nop dword [rax + rax]" ],
-      "type" : {
-        "enumClass" : "com.semantic_graph.NodeType",
-        "value" : "UNKNOWN"
-      }
-    },
-    "1416" : {
-      "operations" : [ "mov rax, qword [rip + 0x200a61]", "test rax, rax", "je 0x5a0" ],
+    "69" : {
+      "operations" : [ "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "clc", "add dword [rax], eax", "add byte [rax], al", "add byte [rax], al", "add al, bh", "add dword [rax], eax", "add byte [rax], al", "add byte [rax], al", "add byte [rax], cl", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rbx], al", "add byte [rax], al", "add byte [rax + rax], al", "add byte [rax], al", "cmp byte [rdx], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "cmp byte [rdx], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "cmp byte [rdx], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "sbb al, 0", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "sbb al, 0", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add dword [rax], eax", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add dword [rax], eax", "add byte [rax], al", "add eax, 0", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add byte [rax], al", "add al, bl" ],
       "type" : {
         "enumClass" : "com.semantic_graph.NodeType",
         "value" : "UNKNOWN"
       }
     }
-  },
-  "edges" : [ [ [ 1456, 1512 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1465, 1491 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1248, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1491, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1479, 1491 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1335, 1347 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1520, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1638, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 69, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1479, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1465, 1479 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1552, 1638 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1224, 1226 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1520, 1376 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1376, 1440 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1416, 1440 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1416, 1428 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1208, 1226 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1552, 1606 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1208, 1224 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1428, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1616, 1638 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1224, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1360, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1606, 1616 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1456, 1465 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1606, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1668, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1616, 1616 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1530, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1347, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1335, 1360 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1664, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1512, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1312, 1335 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1376, 1416 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1312, 1360 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1440, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1226, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ], [ [ 1264, 0 ], {
-    "type" : {
-      "enumClass" : "com.semantic_graph.EdgeType",
-      "value" : "ControlFlow"
-    }
-  } ] ]
+  }
 }

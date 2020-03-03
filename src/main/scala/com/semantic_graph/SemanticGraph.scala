@@ -3,9 +3,11 @@ package com.semantic_graph
 import com.fasterxml.jackson.annotation.JsonValue
 import io.github.izgzhen.msbase.JsonUtil
 
-case class NodeId(id: String) {
+case class NodeId(id: String) extends Comparable[NodeId] {
   @JsonValue
   def getId: String = id
+
+  override def compareTo(o: NodeId): Int = id.compareTo(o.id)
 }
 
 object EdgeType extends Enumeration {
