@@ -1,9 +1,7 @@
-name := "semantic-graph"
+name := "semantic-graph.scala"
 
-ThisBuild / organization := "com.semantic_graph"
-ThisBuild / version      := "0.1-SNAPSHOT"
-
-version := "0.1"
+organization := "com.github.semantic-graph"
+version      := "0.1.0"
 
 scalaVersion := "2.13.1"
 
