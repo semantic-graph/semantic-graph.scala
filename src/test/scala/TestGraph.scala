@@ -1,5 +1,6 @@
 import com.semantic_graph.reader.{Radare, Rb2Graph}
 import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, SelfNamedGraph}
+import com.semantic_graph.writer.GexfWriter
 import junit.framework.TestCase
 import org.junit.Assert._
 import org.junit.Test
@@ -61,5 +62,12 @@ class TestGraph extends TestCase {
     val t1 = (nd1.valHash(), e1.valHash())
     val t2 = (nd2.valHash(), e2.valHash())
     assertEquals(t1.hashCode(), t2.hashCode())
+  }
+
+  @Test def testGraphWriter(): Unit = {
+    val g = new GexfWriter[Integer, Integer]()
+    val i = Integer.valueOf(1)
+    val n1 = g.createNode("example", Map(i -> "x"))
+    assertEquals("Wrong node attribute", Some("x"), g.getNodeAttrs(n1).get(i))
   }
 }

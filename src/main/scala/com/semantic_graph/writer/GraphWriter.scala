@@ -8,6 +8,7 @@ trait GraphWriter[NodeAttr <: Serializable, EdgeAttr <: Serializable]
   def createNode(label: String, attrs: Map[NodeAttr, String]): NodeId
   def getNodes: Set[NodeId]
   def getNodeLabel(nodeId: NodeId): String
+  def getNodeAttrs(nodeId: NodeId): Map[NodeAttr, String]
   def getEdges: Set[(NodeId, NodeId)]
   def getEdgeAttrs(srcId: NodeId, tgtId: NodeId): Map[EdgeAttr, String]
   def addEdge(from: NodeId, to: NodeId, attrs: Map[EdgeAttr, String]): Unit

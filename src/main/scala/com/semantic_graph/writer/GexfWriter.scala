@@ -21,12 +21,15 @@ class GexfWriter[NodeAttr <: Serializable, EdgeAttr <: Serializable] extends Gra
   private val edgeAttrs = new AttributeListImpl(AttributeClass.EDGE)
   graph.getAttributeLists.add(edgeAttrs)
   private val nodeAttrMap = mutable.Map[NodeAttr, Attribute]()
+  private val nodeAttrRevMap = mutable.Map[Attribute, NodeAttr]()
   private val edgeAttrMap = mutable.Map[EdgeAttr, Attribute]()
   private val edgeAttrRevMap = mutable.Map[Attribute, EdgeAttr]()
 
   private def getNodeAttr(attr: NodeAttr): Attribute = {
     if (!nodeAttrMap.contains(attr)) {
-      nodeAttrMap.put(attr, nodeAttrs.createAttribute(attr.toString, AttributeType.STRING, attr.toString))
+      val attrVal = nodeAttrs.createAttribute(attr.toString, AttributeType.STRING, attr.toString)
+      nodeAttrMap.put(attr, attrVal)
+      nodeAttrRevMap.put(attrVal, attr)
     }
     nodeAttrMap(attr)
   }
@@ -79,5 +82,9 @@ class GexfWriter[NodeAttr <: Serializable, EdgeAttr <: Serializable] extends Gra
 
   override def getNodeLabel(nodeId: NodeId): String = {
     graph.getNode(nodeId.id).getLabel
+  }
+
+  override def getNodeAttrs(nodeId: NodeId): Map[NodeAttr, String] = {
+    graph.getNode(nodeId.id).getAttributeValues.asScala.map(v => (nodeAttrRevMap(v.getAttribute), v.getValue)).toMap
   }
 }
