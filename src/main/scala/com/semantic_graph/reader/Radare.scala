@@ -1,6 +1,6 @@
 package com.semantic_graph.reader
 
-import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, SemanticGraph}
+import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, Provenance, SemanticGraph}
 import io.github.izgzhen.msbase.JsonUtil
 
 class Block(size: Int, val ops: List[Map[String, Object]], colorize: Int, val offset: Int, val jump: Int, val fail: Int)
@@ -27,7 +27,7 @@ object Radare {
         blockMap += (block.offset -> (block.jump, block.fail, block.ops.map(parseOpObj)))
       }
     }
-    val g = new SemanticGraph()
+    val g = new SemanticGraph(Provenance.Unknown())
     for ((offset, (_, _, ops)) <- blockMap) {
       g.addNode(NodeData(ops, NodeType.UNKNOWN), offset)
     }

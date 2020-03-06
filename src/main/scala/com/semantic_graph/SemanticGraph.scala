@@ -1,6 +1,7 @@
 package com.semantic_graph
 
 import com.fasterxml.jackson.annotation.JsonValue
+import com.semantic_graph.Provenance.{Subtract, Union}
 import io.github.izgzhen.msbase.JsonUtil
 
 case class NodeId(id: String) extends Comparable[NodeId] {
@@ -33,14 +34,14 @@ case class EdgeData(`type` : EdgeType.Value) {
 }
 
 // TODO: Use Scala-graph to rewrite this
-class SemanticGraph {
+class SemanticGraph (val provenance: Provenance) {
   protected var nodes : Map[NodeId, NodeData] = Map()
   protected var nodeHashMap : Map[Int, NodeId] = Map()
   protected var edges : Map[(NodeId, NodeId), EdgeData] = Map()
   protected var edgeHashMap : Map[Int, (NodeId, NodeId)] = Map()
 
-  def copy() : SemanticGraph = {
-    val g = new SemanticGraph()
+  def copy(newProvenance: Provenance) : SemanticGraph = {
+    val g = new SemanticGraph(newProvenance)
     g.nodes ++= nodes
     g.nodeHashMap ++= nodeHashMap
     g.edges ++= edges
@@ -49,7 +50,8 @@ class SemanticGraph {
   }
 
   def subtract(other: SemanticGraph) : SemanticGraph = {
-    val self = this.copy()
+    val newProvenance = Subtract(provenance, other.provenance)
+    val self = this.copy(newProvenance)
     for (k <- other.edgeHashMap.keys) {
       if (self.edgeHashMap.contains(k)) {
         self.delEdge(k)
@@ -70,7 +72,8 @@ class SemanticGraph {
   }
 
   def union(other: SemanticGraph) : SemanticGraph = {
-    val g = other.copy()
+    val newProvenance = Union(provenance, other.provenance)
+    val g = other.copy(newProvenance)
     for ((nodeId, nodeData) <- nodes) {
       if (!g.nodes.contains(nodeId)) {
         g.addNode(nodeData, nodeId)
@@ -122,7 +125,8 @@ class SemanticGraph {
   def toJSON: String = {
     JsonUtil.toJson(Map[String, Object](
       "nodes" -> nodes,
-      "edges" -> edges.toList
+      "edges" -> edges.toList,
+      "provenance" -> provenance.toString
     ))
   }
 
@@ -144,7 +148,7 @@ class SemanticGraph {
   }
 }
 
-class SelfNamedGraph extends SemanticGraph {
+class SelfNamedGraph(override val provenance: Provenance) extends SemanticGraph(provenance) {
   def addNode(nodeData: NodeData) : NodeId = {
     addNode(nodeData, NodeId(nodes.size.toString))
   }

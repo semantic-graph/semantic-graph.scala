@@ -2,7 +2,7 @@ package com.semantic_graph.reader
 
 import java.io.{File, FileInputStream}
 
-import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeId, NodeType, SemanticGraph}
+import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeId, NodeType, Provenance, SemanticGraph}
 
 import scala.xml._
 
@@ -10,7 +10,7 @@ import scala.xml._
 object Gexf2Graph {
   def parse(str: String): SemanticGraph = {
     val xmlFile = XML.load(new FileInputStream(new File(str)))
-    val g = new SemanticGraph()
+    val g = new SemanticGraph(Provenance.Unknown())
     for (node <- xmlFile \\ "node") {
       val label = (node \ "@label").text
       val id = (node \ "@id").text
