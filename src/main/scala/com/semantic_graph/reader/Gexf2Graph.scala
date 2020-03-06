@@ -10,7 +10,7 @@ import scala.xml._
 object Gexf2Graph {
   def parse(str: String): SemanticGraph = {
     val xmlFile = XML.load(new FileInputStream(new File(str)))
-    val g = new SemanticGraph(Provenance.Unknown())
+    val g = new SemanticGraph(Provenance.Gexf(str))
     for (node <- xmlFile \\ "node") {
       val label = (node \ "@label").text
       val id = (node \ "@id").text
