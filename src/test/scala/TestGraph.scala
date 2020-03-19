@@ -1,5 +1,5 @@
 import com.semantic_graph.reader.{Radare, Rb2Graph}
-import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, SelfNamedGraph}
+import com.semantic_graph.{EdgeData, EdgeType, NodeData, NodeType, Provenance, SelfNamedGraph}
 import com.semantic_graph.writer.GexfWriter
 import junit.framework.TestCase
 import org.junit.Assert._
@@ -9,7 +9,7 @@ import scala.io.Source
 
 class TestGraph extends TestCase {
   @Test def testGraph(): Unit = {
-    val g = new SelfNamedGraph()
+    val g = new SelfNamedGraph(Provenance.Unknown())
     val n1 = g.addNode(NodeData(Seq(), NodeType.UNKNOWN))
     val n2 = g.addNode(NodeData(Seq(), NodeType.UNKNOWN))
     g.addEdge(n1, n2, EdgeData(EdgeType.ControlFlow))
@@ -17,10 +17,10 @@ class TestGraph extends TestCase {
       println(nodeId + ": " + nodeData)
     }
 
-    val h = g.diff(g.copy())
+    val h = g.diff(g.copy(Provenance.Unknown()))
     assertEquals(h.iterNodes.toString(), 0, h.iterNodes.size)
 
-    val h2 = new SelfNamedGraph()
+    val h2 = new SelfNamedGraph(Provenance.Unknown())
     h2.addNode(NodeData(Seq("hello"), NodeType.UNKNOWN))
     val d2 = h.diff(h2)
     assertEquals(d2.iterNodes.toString(), 1, d2.iterNodes.size)
