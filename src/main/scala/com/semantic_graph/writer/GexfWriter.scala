@@ -68,6 +68,7 @@ class GexfWriter[NodeAttr <: Serializable, EdgeAttr <: Serializable] extends Gra
 
   override def addEdge(from: NodeId, to: NodeId, attrs: Map[EdgeAttr, String]): Unit = {
     val edge = graph.getNode(from.id).connectTo(graph.getNode(to.id))
+    edge.setEdgeType(EdgeType.DIRECTED)
     for ((attr, value) <- attrs) {
       edge.getAttributeValues.addValue(getEdgeAttr(attr), value)
     }
