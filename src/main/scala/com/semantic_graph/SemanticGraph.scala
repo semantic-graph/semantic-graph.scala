@@ -36,9 +36,14 @@ case class EdgeData(`type` : EdgeType.Value) {
 // TODO: Use Scala-graph to rewrite this
 class SemanticGraph (val provenance: Provenance) {
   protected var nodes : Map[NodeId, NodeData] = Map()
-  protected var nodeHashMap : Map[Int, NodeId] = Map()
+  protected var nodeHashMap : Map[Int, Set[NodeId]] = Map()
   protected var edges : Map[(NodeId, NodeId), EdgeData] = Map()
-  protected var edgeHashMap : Map[Int, (NodeId, NodeId)] = Map()
+  protected var edgeHashMap : Map[Int, Set[(NodeId, NodeId)]] = Map()
+
+  override def toString: String = {
+    val es = edges.map { case ((u, v), edgeData) => (nodes(u).toString, nodes(v).toString, edgeData.toString) }.toList
+    es.sortBy(_._1).map(x => x._1 + ", " + x._2 + ": " + x._3).mkString("\n")
+  }
 
   def copy(newProvenance: Provenance) : SemanticGraph = {
     val g = new SemanticGraph(newProvenance)
@@ -60,6 +65,15 @@ class SemanticGraph (val provenance: Provenance) {
     for (n <- self.nodes.keys) {
       if (self.neighbors(n).isEmpty && neighbors(n).nonEmpty) {
         self.delNode(n)
+      }
+    }
+    for (k <- other.nodeHashMap.keys) {
+      if (self.nodeHashMap.contains(k)) {
+        for (n <- self.nodeHashMap(k)) {
+          if (self.neighbors(n).isEmpty) {
+            self.delNode(n)
+          }
+        }
       }
     }
     self
@@ -88,7 +102,7 @@ class SemanticGraph (val provenance: Provenance) {
   }
 
   def delEdge(k: Int) : Unit = {
-    edges -= edgeHashMap(k)
+    edges = edges.removedAll(edgeHashMap(k))
     edgeHashMap -= k
   }
 
@@ -110,13 +124,16 @@ class SemanticGraph (val provenance: Provenance) {
   }
 
   def addEdge(u: NodeId, v: NodeId, edgeData: EdgeData) : Unit = {
-    assert(edges.get((u, v)).isEmpty, edges.get((u, v)))
+    assert(!edges.contains((u, v)), edges.get((u, v)))
     edges += ((u, v) -> edgeData)
-    edgeHashMap += ((nodes(u).valHash(), nodes(v).valHash(), edges((u, v)).valHash()).hashCode() -> (u, v))
+    val edgeHash = (nodes(u).valHash(), nodes(v).valHash(), edges((u, v)).valHash()).hashCode()
+    val prevSet = edgeHashMap.getOrElse(edgeHash, Set())
+    val newEdge = (u, v)
+    edgeHashMap += (edgeHash -> prevSet.+(newEdge))
   }
 
   def hasEdge(u: NodeId, v: NodeId) : Boolean = {
-    edges.get((u, v)).isDefined
+    edges.contains((u, v))
   }
 
   def iterNodes : Iterator[(NodeId, NodeData)] = nodes.iterator
@@ -137,7 +154,9 @@ class SemanticGraph (val provenance: Provenance) {
   def addNode(nodeData: NodeData, nodeId: NodeId) : NodeId = {
     assert (!nodes.contains(nodeId))
     nodes += (nodeId -> nodeData)
-    nodeHashMap += (nodeData.valHash() -> nodeId)
+    val hash = nodeData.valHash()
+    val nodeSet = nodeHashMap.getOrElse(nodeData.valHash(), Set())
+    nodeHashMap += (hash -> nodeSet.+(nodeId))
     nodeId
   }
 
