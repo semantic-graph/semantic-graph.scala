@@ -143,7 +143,7 @@ class SemanticGraph (val provenance: Provenance) {
     JsonUtil.toJson(Map[String, Object](
       "nodes" -> nodes,
       "edges" -> edges.toList,
-      "provenance" -> provenance.toString
+      "provenance" -> provenance.toJSONObject
     ))
   }
 
