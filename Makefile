@@ -1,4 +1,4 @@
-GITHASH:=$(shell git hash)
+GITHASH:=$(shell git rev-parse --short=8 --verify HEAD)
 
 SCALA_FILES:=$(shell find src -name "*.scala")
 VERSION:=$(shell grep version build.sbt | sed 's/^version.*\"\(.*\)\"/\1/')
