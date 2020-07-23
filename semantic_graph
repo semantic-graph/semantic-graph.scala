@@ -10,4 +10,9 @@ fi
 
 VERSION=$(grep version $DIR/build.sbt | sed 's/^version.*\"\(.*\)\"\r/\1/')
 
-java -jar target/scala-2.13/semantic-graph.scala-assembly-$VERSION.jar ${@:1}
+JAR=target/scala-2.13/semantic-graph.scala-assembly-$VERSION.jar
+
+gitver=$(cat $JAR.gitver)
+echo "Running SemanticGraph (Git hash: $gitver)"
+
+java -jar $JAR ${@:1}
