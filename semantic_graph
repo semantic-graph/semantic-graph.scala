@@ -8,7 +8,7 @@ if [ -z "$BATCH_RUN" ]; then
     make -C $DIR jar
 fi
 
-VERSION=$(grep version $DIR/build.sbt | sed 's/^version.*\"\(.*\)\"\r/\1/')
+VERSION=$(./sbt-ver | tr -d '\r')
 
 JAR=target/scala-2.13/semantic-graph.scala-assembly-$VERSION.jar
 
