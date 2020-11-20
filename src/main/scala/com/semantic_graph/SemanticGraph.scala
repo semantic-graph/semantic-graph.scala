@@ -23,7 +23,8 @@ object EdgeType extends Enumeration {
 }
 
 object NodeType extends Enumeration {
-  val EXPR, STMT, UNKNOWN, CONSTANT, METHOD = Value
+  val EXPR, STMT, UNKNOWN, CONSTANT, METHOD, // Deprecated
+      Constant, Call, Construct, PrimOp = Value
 }
 
 case class NodeData(operations : Seq[String], `type`: NodeType.Value) {
