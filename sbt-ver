@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep version build.sbt | sed 's/^version.*\"\(.*\)\"/\1/'

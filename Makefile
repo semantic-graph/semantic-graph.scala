@@ -1,7 +1,7 @@
 GITHASH:=$(shell git rev-parse --short=8 --verify HEAD)
 
 SCALA_FILES:=$(shell find src -name "*.scala")
-VERSION:=$(shell grep version build.sbt | sed 's/^version.*\"\(.*\)\"/\1/')
+VERSION:=$(shell ./sbt-ver)
 
 JAR:=target/scala-2.13/semantic-graph.scala-assembly-$(VERSION).jar
 GITHASH_FILE:=$(JAR).gitver
